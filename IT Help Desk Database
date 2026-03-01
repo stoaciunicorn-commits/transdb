@@ -1,0 +1,545 @@
+
+
+IT Help Desk Database
+
+
+
+October 2022
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    I. ENTITIES OF DATABASE
+
+The database contains 8 entities.
+Entities of Database
+Attribute Amounts of Entities
+user
+6
+permission
+6
+login
+5
+issues
+7
+ticket
+5
+help_desk
+8
+track
+6
+
+    II. IT HELP DESK DATABASE ENTITY RELATION SHIP DIAGRAM
+
+
+
+
+
+    III. IT HELPDESK DATABASE ENTITY RELATION SCHEMA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    IV. ATTRIBUTES OF THE DATABASE
+
+A. USSER ENTITY
+Attributes
+Data Type
+Nullable
+Constraints
+Description
+USERID
+NUMBER (12,0)
+NO
+Foreign Key, check
+it stores unique user identity. And it is Foreign Key of login entity in this entity. There are 12-character number data type constraints and that must not start with 0. Also, that cannot pass empty.
+USERFIRSTNAME
+VARCHAR (45 CHAR)
+NO
+check
+user first name. There are 45-character varchar data type (only letters accepted) constraints. Also, that cannot pass empty.
+USERLASTNAME
+VARCHAR (45 CHAR)
+NO
+check
+user last name. There are 45-character varchar data type (only letters accepted) constraints. Also, that cannot pass empty.
+USEREMAIL
+VARCHAR (45 CHAR)
+NO
+Check, unique
+user email. There are 45-character varchar data type constraints. Also, that cannot pass empty.
+USERPHONE
+NUMBER (12,0)
+NO
+Check, unique
+user phone number. There are 12-character number data type constraints. Also, that cannot pass empty.
+CREATEDATE
+DATE
+NO
+check
+when the form has created for each user. There are date data type constraints. Also, that cannot pass empty.
+--------------------------------------------------------
+--  Constraints for Table USSER
+--------------------------------------------------------
+  ALTER TABLE "S21005686"."USSER" MODIFY ("USERID" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."USSER" MODIFY ("USERFIRSTNAME" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."USSER" MODIFY ("USERLASTNAME" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."USSER" MODIFY ("USEREMAIL" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."USSER" MODIFY ("USERPHONE" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."USSER" MODIFY ("CREATEDATE" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."USSER" ADD UNIQUE ("USEREMAIL")
+  USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "DATA"  ENABLE;
+  ALTER TABLE "S21005686"."USSER" ADD UNIQUE ("USERPHONE")
+  USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "DATA"  ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table USSER
+--------------------------------------------------------
+  ALTER TABLE "S21005686"."USSER" ADD CONSTRAINT "LOGIN_USERS_FK" FOREIGN KEY ("USERID")
+	  REFERENCES "S21005686"."LOGIN" ("LOGINPERMISSIONID") ENABLE;
+
+
+
+
+
+
+
+
+
+
+
+B. PERMISSION ENTITY
+Attributes
+Data Type
+Nullable
+Constraints
+Description
+PERMISSIONID
+NUMBER (12,0)
+NO
+Foreign Key, Check
+it stores unique permission identity. And it is Foreign Key of login entity in this entity. There are 12-character number data type constraints and that must not start with 0. Also, that cannot pass empty.
+PERMISSIONNAME
+VARCHAR (45 CHAR)
+NO
+Check
+permission name. There are 45-character varchar data type constraints. Also, that cannot pass empty.
+PERMISSIONDESCRIPTION
+VARCHAR (255 CHAR)
+NO
+ Check
+Here, permission's jurisdictions and information about the operations that each permission can do are defined. There are 255-character varchar data type constraints. Also, that cannot pass empty.
+PERMISSIONMODULE
+VARCHAR (45 CHAR)
+NO
+Check
+it is authorized parts of the database system. There are 45-character varchar data type constraints. Also, that cannot pass empty.
+PERMISSIONROLE
+VARCHAR (45 CHAR)
+NO
+Check
+this is the role of permission; each user should have different permission for each module. As a requirement of the user role, he/she can get restriction or full permission for certain parts of the database. There are 45-character varchar data type constraints. Also, that cannot pass empty.
+CREATEDATE
+DATE
+NO
+Check
+when the form has created for each user. There are date data type constraints.  Also, that cannot pass empty.
+--------------------------------------------------------
+--  Constraints for Table PERMISSION
+--------------------------------------------------------
+  ALTER TABLE "S21005686"."PERMISSION" MODIFY ("PERMISSIONID" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."PERMISSION" MODIFY ("PERMISSIONNAME" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."PERMISSION" MODIFY ("PERMISSIONDESCRIPTION" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."PERMISSION" MODIFY ("PERMISSIONMODULE" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."PERMISSION" MODIFY ("PERMISSIONROLE" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."PERMISSION" MODIFY ("CREATEDATE" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Ref Constraints for Table PERMISSION
+--------------------------------------------------------
+  ALTER TABLE "S21005686"."PERMISSION" ADD CONSTRAINT "LOGIN_PERMISSION_FK" FOREIGN KEY ("PERMISSIONID")
+	  REFERENCES "S21005686"."LOGIN" ("LOGINPERMISSIONID") ENABLE;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C. LOGIN ENTITY
+Attributes
+Data Type
+Nullable
+Constraints
+Description
+LOGINID
+NUMBER (12,0)
+NO
+Unique, Check
+it stores unique login identity. There are 12-character number data type constraints and that must not start with 0. Also, that cannot pass empty.
+LOGINPERMISSIONID
+NUMBER (12,0)
+NO
+Primary Key, Check
+it stores unique login permission identity. And it is Primary Key of user and permission entities’ Foreign Keys. There are 12-character number data type constraints and that must not start with 0. Also, that cannot pass empty.
+LOGINUSERNAME
+VARCHAR (45 CHAR)
+NO
+Unique, Check
+Login username. There are 45-character varchar data type constraints. That must be unique. Also, that cannot pass empty.
+LOGINPASSWORD
+VARCHAR (12 CHAR)
+NO
+Check
+Login password. There are 12-character varchar data type constraints. Also, that cannot pass empty.
+CREATEDATE
+DATE
+NO
+Check
+when the form has created for each user.  There are date data type constraints.  Also, that cannot pass empty.
+
+--------------------------------------------------------
+--  Constraints for Table LOGIN
+--------------------------------------------------------
+  ALTER TABLE "S21005686"."LOGIN" MODIFY ("LOGINID" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."LOGIN" MODIFY ("LOGINPERMISSIONID" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."LOGIN" MODIFY ("LOGINUSERNAME" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."LOGIN" MODIFY ("LOGINPASSWORD" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."LOGIN" MODIFY ("CREATEDATE" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."LOGIN" ADD PRIMARY KEY ("LOGINPERMISSIONID")
+  USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "DATA"  ENABLE;
+  ALTER TABLE "S21005686"."LOGIN" ADD UNIQUE ("LOGINID")
+  USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "DATA"  ENABLE;
+  ALTER TABLE "S21005686"."LOGIN" ADD UNIQUE ("LOGINUSERNAME")
+  USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "DATA"  ENABLE;
+
+
+
+
+
+
+
+
+
+
+D. ISSUES ENTITY
+Attributes
+Data Type
+Nullable
+Constraints
+Description
+ISSUESID
+NUMBER (12,0)
+NO
+Foreign Key, Check
+it stores issues’ identity. There are 12-character number data type constraints and that must not start with 0. That is Foreign Key of login entity’s loginPersmissionID attributes. Also, that cannot pass empty.
+ISSUESSID
+NUMBER (12,0)
+NO
+Primary Key, Check,
+it stores unique identity. And it is Primary Key of ticket, track and help_desk entities Foreign Key's in this entity. One user can have more than one issues. So, all issues produce unique identity.  this ID allows track each single issues. There are 12-character number data type constraints and that must not start with 0. Also, that cannot pass empty.
+ISSUESTYPE
+VARCHAR (100 CHAR)
+NO
+Check,
+that stores the type of issues. There are 100-character varchar data type constraints. Also, that cannot pass empty.
+ISSUESTITLE
+VARCHAR (100 CHAR)
+NO
+ Check,
+that stores the title of issues. There are 100-character varchar data type constraints. Also, that cannot pass empty.
+ISSUESDESCRIPTION
+VARCHAR (255 CHAR)
+NO
+Check,
+that gives detailed information about the created issues. There are 255-character varchar data type constraints. Also, that cannot pass empty.
+STARTDATE
+DATE
+NO
+ Check,
+the date of the issue when that informed about login issues. There are date data type constraints.  Also, that cannot pass empty.
+ENDDATE
+DATE
+YES
+Check,
+the date of the issue when that find solution. There are date data type constraints.  
+
+--------------------------------------------------------
+--  Constraints for Table ISSUES
+--------------------------------------------------------
+  ALTER TABLE "S21005686"."ISSUES" MODIFY ("ISSUEID" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."ISSUES" MODIFY ("ISSUESID" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."ISSUES" MODIFY ("ISSUESTYPE" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."ISSUES" MODIFY ("ISSUESTITLE" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."ISSUES" MODIFY ("ISSUESDESCRIPTION" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."ISSUES" MODIFY ("STARTDATE" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."ISSUES" ADD PRIMARY KEY ("ISSUESID")
+  USING INDEX PCTFREE 10 INITRANS 20 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "DATA"  ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table ISSUES
+--------------------------------------------------------
+  ALTER TABLE "S21005686"."ISSUES" ADD CONSTRAINT "LOGIN_ISSUES_FK" FOREIGN KEY ("ISSUEID")
+	  REFERENCES "S21005686"."LOGIN" ("LOGINPERMISSIONID") ENABLE;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+E. TICKET  ENTITY
+Attributes
+Data Type
+Nullable
+Constraints
+Description
+ISSUESID
+NUMBER (12,0)
+NO
+Foreign Key, check
+it stores issues identity. It is Foreign Key of issuesSID of issues entity. There are 12-character number data type constraints and that must not start with 0. Also, that cannot pass empty.
+TICKETTYPE
+VARCHAR (100 CHAR)
+NO
+Check
+That stores type of ticket. There are 100-character varchar data type constraint. Also, that cannot pass empty.
+TICKETDESCRIPTION
+VARCHAR (255 CHAR)
+NO
+Check
+that gives detailed information about the created ticket. There are 255-character varchar data type constraints. Also, that cannot pass empty.
+STARTDATE
+DATE
+NO
+Check
+the date of the ticket when that informed about issue. There is date data type constraint.  Also, that cannot pass empty.
+ENDDATE
+DATE
+YES
+Check
+the date of the ticket when that find solution for issue. There is date data type constraint.  
+
+--------------------------------------------------------
+--  Constraints for Table TICKET
+--------------------------------------------------------
+  ALTER TABLE "S21005686"."TICKET" MODIFY ("ISSUESID" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."TICKET" MODIFY ("TICKETTYPE" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."TICKET" MODIFY ("TICKETDESCRIPTION" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."TICKET" MODIFY ("STARTDATE" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Ref Constraints for Table TICKET
+--------------------------------------------------------
+  ALTER TABLE "S21005686"."TICKET" ADD CONSTRAINT "TICKET_ISSUES_FK" FOREIGN KEY ("ISSUESID")
+	  REFERENCES "S21005686"."ISSUES" ("ISSUESID") ENABLE;
+
+
+
+
+
+
+
+
+
+
+
+
+
+F. HELP_DESK ENTITY
+Attributes
+Data Type
+Nullable
+Constraints
+Description
+ISSUESID
+NUMBER (12,0)
+NO
+Foreign Key, Check
+it stores issues identity. It is Foreign Key of issuesSID of issues entity. There are 12-character number data type constraints and that must not start with 0. Also, that cannot pass empty.
+HELP TYPE
+VARCHAR (100 CHAR)
+NO
+Check
+That stores type of help. There are 100-character varchar data type constraints. Also, that cannot pass empty.
+HELP DESCRIPTION
+VARCHAR (255 CHAR)
+NO
+ Check
+that gives detailed information about help. There are 255-character varchar data type constraints. Also, that cannot pass empty.
+HELPDESKEMPLOYEEID
+NUMBER (12,0)
+NO
+Check
+that stores employee id of help desk department. There are 12-character number data type constraints. Also, that cannot pass empty.
+HELPDESKEMPLOYEEFN
+VARCHAR (45 CHAR)
+NO
+Check
+that stores employee first name of help desk department. There are 45-character varchar data type constraints. Also, that cannot pass empty.
+HELPDESKEMPLOYEELN
+VARCHAR (45 CHAR)
+NO
+Check
+that stores employee last name of help desk department. There are 45-character varchar data type constraints. Also, that cannot pass empty.
+STARTDATE
+DATE
+NO
+Check
+the date of the help_desk when help_desk informed about ticket. There is date data type constraint.  Also, that cannot pass empty.
+ENDDATE
+DATE
+YES
+Check
+the date of the help_desk when that find solution for ticket. There is date data type constraint.  
+
+--------------------------------------------------------
+--  Constraints for Table HELP_DESK
+--------------------------------------------------------
+  ALTER TABLE "S21005686"."HELP_DESK" MODIFY ("ISSUESID" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."HELP_DESK" MODIFY ("HELPTYPE" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."HELP_DESK" MODIFY ("HELPDESCRIPTION" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."HELP_DESK" MODIFY ("HELPDESKEMPLOYEEID" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."HELP_DESK" MODIFY ("HELPDESKEMPLOYEEFN" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."HELP_DESK" MODIFY ("HELPDESKEMPLOYEELN" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."HELP_DESK" MODIFY ("STARTDATE" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Ref Constraints for Table HELP_DESK
+--------------------------------------------------------
+  ALTER TABLE "S21005686"."HELP_DESK" ADD CONSTRAINT "HELPDESK_ISSUES_FK" FOREIGN KEY ("ISSUESID")
+	  REFERENCES "S21005686"."ISSUES" ("ISSUESID") ENABLE;
+
+
+
+
+
+
+
+
+
+
+
+G. TRACK ENTITY
+Attributes
+Data Type
+Nullable
+Constraints
+Description
+ISSUESID
+NUMBER (12,0)
+NO
+Foreign Key, check
+it stores unique track identity. There are 12-character number data type constraints and that must not start with 0. Also, that cannot pass empty.
+TRACKTYPE
+VARCHAR (100 CHAR)
+NO
+Check
+That stores type of track. There are 100-character varchar data type constraints. Also, that cannot pass empty.
+TRACKDESCRIPTION
+VARCHA R(255 CHAR)
+NO
+Check
+that gives detailed information about track. There are 255-character varchar data type constraint. Also, that cannot pass empty.
+TRACKSTATUS
+VARCHAR (10 CHAR)
+NO
+Check
+That stores track status. If the issue solved that shows closed if not that shows open. There are 10-character varchar data type constraint. Also, that cannot pass empty.
+STARTDATE
+DATE
+NO
+Check
+the date of the track when that informed about help_desk/service_provider. There are date data type constraints.  Also, that cannot pass empty.
+ENDDATE
+DATE
+YES
+Check
+the date of the track when that find solution for ticket There is date data type constraints. 
+
+--------------------------------------------------------
+--  Constraints for Table TRACK
+--------------------------------------------------------
+  ALTER TABLE "S21005686"."TRACK" MODIFY ("ISSUESID" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."TRACK" MODIFY ("TRACKTYPE" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."TRACK" MODIFY ("TRACKDESCRIPTION" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."TRACK" MODIFY ("TRACKSTATUS" NOT NULL ENABLE);
+  ALTER TABLE "S21005686"."TRACK" MODIFY ("STARTDATE" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Ref Constraints for Table TRACK
+--------------------------------------------------------
+  ALTER TABLE "S21005686"."TRACK" ADD CONSTRAINT "TRACK_ISSUES_FK" FOREIGN KEY ("ISSUESID")
+	  REFERENCES "S21005686"."ISSUES" ("ISSUESID") ENABLE;
+
+
+
+
+
+
+
+
