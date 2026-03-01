@@ -1,0 +1,90 @@
+Information System Failures
+
+
+August 2022
+
+
+ABSTRACT¬¬The rapid increase in technological capabilities and the Internet being effective in international communication systems have significantly reduced the global transaction costs of organizations and businesses have had the opportunity to sell , produce and products, operate all over the world and the opportunity compete globally.
+    Organizations spend millions of pounds on their information systems to switch to digital business conditions, to perform their core business processes and management electronically in order to gain a global competitive advantage and survive in a rapidly changing world and fluctuating economic processes with the power of information .
+    However, information systems, which increase the value of organizations and invested in order to add real economic value to organizations, continue to give system errors due to financial, technical, human causes and political reasons, as well as organizational causes.
+    In this discussion paper, some review research has been done to provide an overview of what could be the source of system failures and how to prevent these system failures and how information systems can be improved.
+Key Words: Information, Information System, Information System Failures. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    I. INTRODUCTION
+    Information is expressed as the transformation of data, which is a set of raw facts that occur in organizations or physical environments, into a meaningful and purposeful one for people and organizations.
+    Today, which is called The Age of Information Economy, organizations need information to fulfill their business goals, make conscious decisions, ensure efficiency, gain customer trust, develop new products, develop services and models, seize market opportunities, seize corporate strategy, provide competitive advantage, produce high quality-low price products and increase employee productivity. And there is a growing relationship between these goals of organizations and their use of information systems [1]. 
+    In organizations whose core elements are people (employees, suppliers, customers), business processes, structures, policy and culture, information systems are an integral part of the organization. And Information systems perform interrelated technological and managerial functions in organizations such as collecting or transforming, processing, storing and distributing information. [2] 
+    Today, information systems are very important in sectors such as service, health, education, industry, finance, insurance, real estate, travel, where more than half of their market value is the non-physical possess as information value. Even they cannot even work and do their jobs without information systems [1]. 
+    Failure of information systems that are such importance for organizations might be the reason for make wrong decisions based on predictions, speculation, and guesswork, It can lead to the inability to provide real-time data about the market, increase in costs, misuse of resources, loss of customers, and even the end of organizations [4] 
+    These information system failures can result from a complex process involving technical, social, political, ethical, economic, organizational and human factors.It can also occur during the project initiation, system analysis and design, testing and implementation phases of system development [2]. 
+    In a study examining the success rates of the projects carried out by the STANDISH Group consultancy firm; It has been revealed that only 4% of all projects are completed with the determined functional features, on time and within the planned budget. So, many projects; It is delivered to organizations with errors and deficiencies such as costs that exceed the budget to a large extent, unexpected time delays, weaker technical performance than expected, and functional feature difficulties in obtaining the expected benefits. Thus starting to use these incomplete systems may result in system failures [5]. 
+    In systems with insufficient user participation or which they are delivered incorrectly, users cannot use the system as desired and they may tend to reject the system and create new systems that work manually [6], [7].
+    In addition, the part of the system where data is entered may have a difficult and complex, unsuccessful and weak user interface which these can make users' interactions with the system extremely complex and cause system failures [6]. 
+    In the existing system in the organization, the inability to organize processes such as data collection, conversion, processing, storage and distribution can cause system failures in obtaining useful information, which are the basic requirements of the organization, and improving organizational performance. Also, the data in the information system may be inaccurate and inconsistent, incorrect or ambiguous, or may not be organized in accordance with business purposes [4] [8]. 
+    Some business processes in the organization need to be constantly modified and improved to match the changes in the market. Therefore, technologically inflexible systems can cause system failures [4]. 
+    On the other hand, the inability of the existing technological tools and workforce to meet the increasing technological demands, complexity and difficulties causes system failures. With the addition of new software and technological tools to be provided for increasing demands, budget overruns occur and trigger financial system failure [4]. 
+    Lack of technical knowledge on how to debug system failures and how to improve systems [4]. 
+    Improper interpretation of customer requirements by programmers or system analysts will result in different outputs and may result in system failures [9]. 
+    Systems may failure due to poor data security of the systems [4]. 
+    The solution to prevent system failures and improve systems may be to install a new system or to suggest improvement of the existing system.
+    Identifying and detailing this information system failures, determining the causes of failure, defining the requirements to be met for system solution, creating a roadmap for the current system and organization, identifying the users and owner of the data for the existing hardware and software, determining whether the solution is suitable for success, determining the success of the solution It may be possible with system analysis, including the feasibility study, in which it is determined in terms of financial, technical and organizational aspects [6]. 
+    One of the most important steps in system analysis is the carefully sort out requirement analysis. Because the functions that the new system or the existing system to be modified cannot be explained in detail, and the aims-targets are not defined carefully may cause system failure and increase costs[2], [6]. 
+    The remaining steps are the full integration of the solution details determined for system analysis and design into the information system. In this process, there are programming, testing, conversion, processing and maintenance stages, and with full implementation of these, system failures can be reduced to minimum levels or annihilate by that processes [8]. 
+    In addition, some failures found in this system analysis may not require an information system solution. Considering that the main causes of some system failures are human-induced, at this point, management arrangements, additional user trainings, improvement of existing organizational processes can provide the elimination of the current failures [6]. 
+    Every organization has its own culture, basic values, ways of working and organizational structure accepted by the majority of its members. And for every organization, there are different information systems, and these information systems have different technological complexities, dimensions, and ways of solving problems [7]. 
+    Therefore, the system analysis process may reveal several solution alternatives. The advantages, disadvantages, costs and benefits of each alternative are specified, the organizational impact, technical features, costs and benefits of the alternative that will best meet the organization's objectives are evaluated, and the appropriate methodology and that methodologies' system approaches can be preferred among Soft System Methodology and Hard System Methodology [6], [7]. 
+
+    II. CONCLUSION & RECOMENDATIONS
+    Organizations need complete and properly functioning information systems in order to seize competitive opportunities globally, make the right decisions, and increase organizational values and survive.
+    In a rapidly changing world, system failures can be seen in systems where organizational change processes and requirements cannot be fully defined and therefore the expected benefit cannot be obtained[10]. 
+    On the other hand, commissioning incomplete information systems that cannot fully fulfill their functionality may turn into an information system failure by requiring more than the planned time and cost.
+    Also, in system projects where user participation is not sufficient and management support is low, the presence of resistance to the use of information systems and the rejection of the use of the system cause information system failures.
+    Make system analysis and strategic analysis to cover all business processes and external factors, determination of organization and business requirements in a transparent and inclusive way, ensuring that users participate in all stages of the projects, even on a small scale, make feasibility studies in the light of correct information and identifying critical success factors can provide significant benefits for preventing system failures and improving existing systems[10]. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+REFERENCES
+1]. A. C. Yoshikuni, A.L. Albertin, “Effects of strategic information systems on competitive strategy and performance.” International journal of productivity and performance management, vol. 67 (9), pp. .2018-2045, 2018.
+[2] C. Sauer, “Understanding support - lessons from a case study”, AJIS : Australian journal of information systems, , vol.1 (1), 1993.
+[3] E. Martinez, "Loud and clear", CIO Magazine, 15 April 1996.
+[4] K. Ewusi-Mensah, "Critical issues in abandoned information systems development projects", Communications of the ACM, Association for Computing Machinery, New York, NY, pp. 73-80, September 1997.
+[5] “Modernization clearing pathway to success”, The Standish Group International, Inc.  60 State Street, Suite 700  Boston, MA 02109, USA,  https://www.standishgroup.com/sample_research_files/Modernization.pdf (accessed 16 July 2022)
+[6] M.L. Markus, M. Keil, "If we build it, they will come: designing information systems that people want to use", Sloan Management Review, MIT, Summer, pp. 11-25, 1994.
+[7] A. Poulymenakou, V. Serafeimidis, "The role of evaluation in dealing with information systems failure: conceptual explorations", Failure and Lessons in Information Technology Management: An International Journal, Cognizant Communication Corp, Elmsford, New York, NY, vol. 1, no. 3, pp. 67-78, 1997.
+[8] J. Stone, “Developing software applications in a changing it environment”, McGraw-Hill, New York, NY. 1997.
+[9] S. Bhattacharya, W. Wasson,  "Wherefore IT failures: a synthesis", Failure and Lessons Learned in Information Technology Management: An International Journal, (Liebowitz, J. Editor in Chief), Cognizant Communication Corp., Elmsford, New York, NY, vol. 1, no. 3, pp. 91-204, 1997
+10] E.Garrity, G.L. Sanders, “Information systems success measurement”, Idea Group Publishing, Hershey, PA., 1998.
+
+
