@@ -1,0 +1,119 @@
+
+TRADITIONAL KEY PERFORMANCE INDICATORS (KPIs) OR METRICS FOR EVALUATING BUSINESS RISKS ARE INEFFICIENT FOR UNDERSTANDING CYBER RISKS
+
+November 2022
+
+
+
+
+
+
+
+
+
+
+
+
+
+ABSTRACT—Today, the increasing technological competencies and the resulting of threats are moving and changing faster than organizations can keep up. Whether in our personal lives or in business, our increasing dependence on technology increases the importance of cyber security day by day.
+
+As a natural result of constantly developing technology, the risks in cyber security are also changing day by day. Thus, organizations use their cyber security policies to take precautions against known cyber attacks.
+
+The intervention system and detection systems are specific to each cyber attack even though the steps to be taken while providing cyber security can be determined as a standard. For this reason, since it is not known to what extent the measures to be taken for cyber attacks will protect business from these cyber attacks, measuring and monitoring the security-maturity level with KPIs and metrics have a very important place for intervention and precautions against for cyber attacks.
+
+In this direction, as in other business processes, KPIs and metrics are defined in order to measure the performance in terms of cyber security. However, it is not easy to define business cyber security risks with Traditional Key Performance Indicators (KPIs) or metrics in the detection of these rapidly changing and evolving cyber attacks.
+
+This study is a report examining existing researchs on how Traditional Key Performance Indicators (KPIs) or metrics may fall short to reduce business risks in the assessment of Cyber Attacks and how current management and strategies to mitigate them can be identified.
+
+Key Words—Traditional Key Performance Indicators (KPIs) or metrics, Cyber Security, Maturity Assessment, ROI, 
+
+
+
+
+
+
+
+
+
+
+
+    I. INTRODUCTION
+
+    Cyber Security has become an inevitable necessity following the Global technological developments. Thus, organizations have begun to exhibit sophisticated Network and Cyber Security approaches [1].
+
+    Network and cyber security standards, which have strategic importance for institutions and business, are determined by states and international organizations. Thus, the establishment of a culture of defining, managing and following the Key Performance Indicator Criteria and metrics are one of the most important stages of the strategy of combating cybercrime [2].
+
+    Organizations can measure the success of their cyber security management by analysing the Cyber Security KPIs and metrics that they created. Traditional Key Performance Indicators (KPIs) or metrics can give business performance outputs on what is being implemented well or unwell in the processes or what points should be considered in these processes. However, these Traditional Key Performance Indicators (KPIs) or metrics are not sufficient to identify ever-changing cyber threat patterns and potential business risks associated with cybersecurity by alone [3], [4].
+
+    First of all, considering that every business has a system specific to its own company culture and way of doing business, it would be appropriate to think that every cyber attack will be unique to itself. At the same time, the criteria and metrics taken into account in business performance processes differ in the face of these differentiated and evolving cyber attacks. For this reason, the existence of worldwide accepted written or verbal cyber security Performance Indicator Criteria (KPI) is out of question [5].
+
+    However, Traditional Key Performance Indicators (KPIs) or metrics are being adapted by organizations for cyber security and they are used for cyber security performance measurement, but they are not very effective for reducing dynamic and inversion cyber security risks [6], [7], [8].
+
+    It seems almost impossible to determine a metric such as the optimum level of security when it comes to the size of the companies, the level of awareness of employees about cyber security, rapidly developing technological competencies, or industry factors [5].
+
+    At this point, it is necessary to analyse the costs and benefits, and this data should be compiled with data flowing from different sources, interpreted and presented in a different format. However, statistical data or log records flowing from security technologies such as SIEM (security information and event management) are insufficient to provide sufficient, timely and relevant information needed in decision-making processes. The amount of events, the cost of controls, the level of protection and ROI (return on investments are interpreted differently by different experts and different organizations [9], [5].
+
+    Mitigation or elimination of cybersecurity business risks often takes place in the light of subjective experience or knowledge. While Traditional Key Performance Indicators (KPIs) or metrics are intended for relatively small metrics such as response times, there are no generally accepted metrics to support them [10], [11]. 
+
+    As a result of these restrictions in Traditional Key Performance Indicators (KPIs) or metrics, improvements in certain areas such as cyber security, network security and application security, and organization specific KPIs and metrics can be prepared, taking into account the needs and special situations of institutions and organizations [5].
+
+    Organizations may relinquish Traditional Key Performance Indicators (KPIs) or metrics which that are insufficient in reducing Cyber security risks and they can use the modelling method to define enterprise specific KPIs and metrics in cases where there is insufficient knowledge to make cyber security analysis processes more efficient [12].
+
+    Business-specific cyber security KPI metrics can be created by considering various cyber security factors such as security-maturity evaluation criteria can be determined to compare the current situation and the targeted situation; for example number of events providing quantitative values, Mean Time to Detection (MTTD), Mean Time to Resolution (MTTR), and Mean Time to Coverage (MTTC), fluctuations in the number of events [5 ], [4], [13] .
+    With the Modelling method, these organizations can use the roadmaps, practices and experiences of organizations in similar sectors, with similar size or similar cyber security systems and exposed to cyber attacks, to determine their own strategies. At the same time, previously accepted calculation metrics can be used as modelling in cybersecurity cost calculations related to cybersecurity, provided that some values are approximate [9], [5].
+
+    In these reviewed studies, it would be appropriate to say that a strictly defined cyber security programs can only be business specific [10].
+
+  When business create cyber security programs, designing their own Key Performance Indicators and metrics with a fully determined purpose will contribute both to the understanding and acceptance of this cyber security process by all employees of the business and that can help to reducing business cyber security risks [9], [14], [15]. 
+
+    The fact that cyber security KPIs and metrics can generate critical data for process improvement or decision making and are related to cyber security objectives may allow organizations to be used efficiently in security performance measurement and while preparing long-term cyber security plans and strategies [10].
+
+    II. CONCLUSION & RECOMENDATIONS
+
+    In our world where cyber attacks take place in large numbers and types, it is very important to understand the needs and expectations of the companies regarding the preparation of cyber security KPIs and metrics, as well as the processes, policies and fields of activity of the business.
+
+    Since each cyber attack will involve its own autonomy, preparing case specific KPIs and metrics rather than Traditional Key Performance Indicators (KPIs) or metrics approaches can help to obtain more efficient results both in order to measure the current cyber security performance and in prospective cyber security strategies.
+
+    At the same time, a good understanding of the ability to mitigate existing cyber security issues or unknown cyber security risks will help mitigate future cyber attacks. 
+
+
+
+
+
+
+
+
+
+
+REFERENCES
+
+[1] G. Christou, “Cybersecurity in the european union resilience and adaptability in governance policy / by George Christou.“ , Palgrave Macmillan, pp.237, 2016. [Online] Available: https://discovered.ed.ac.uk/discovery/fulldisplay?docid=alma9923950870402466&context=L&vid=44UOE_INST:44UOE_VU2&lang=en&search_scope=UoE&adaptor=Local%20Search%20Engine&tab=Everything&query=title,exact,New%20security%20challenges
+
+.[2] A. Fadia, M. Nayfeh, J. Noble, “Follow the leaders: How governments can combat intensifying cybersecurity risks”, www.mckinsey.com ,  https://www.mckinsey.com/industries/public-and-social-sector/our-insights/follow-the-leaders-how-governments-can-combat-intensifying-cybersecurity-risks , 16.09.2020, (accessed 03 February 2023)
+
+.[3] E. Gasiorowski-Denis,  “How to measure the effectiveness of information security.” , www.iso.org , https://www.iso.org/news/2016/12/Ref2151.html  , 16 December 2016 , (accessed 02 February 2023)
+
+[4] S. Bakshi, “Performance measurement metrics for it governance” , ISACA Journal, vol. 6, 1 November 2016, [Online] Available:  https://www.isaca.org/resources/isaca-journal/issues/2016/volume-6/performance-measurement-metrics-for-it-governance
+
+[5] A. Volchkov, “Key performance indicators for security governance”,  ISACA JOURNAL, 30 October 2020, [Online] Available:  https://www.isaca.org/resources/isaca-journal/issues/2020/volume-6/key-performance-indicators-for-security-governance-part-1#1  
+
+[6] A. Jaquith, “Security metrics: replacing fear, uncertainty, and doubt”, Addison-Wesley, USA, 2007.
+
+[7] M. R.  Stytz, “What are the numbers? [review of "Security metrics: replacing fear, uncertainty, and doubt; Jaquith, A.; 2006]”, IEEE Security & Privacy, Vol.5, Iss. 6, pp. 12-12, November-December 2007, [Online] Available:   https://ieeexplore.ieee.org/document/4402440
+
+[8] “What are kpis & benchmarks?” , www.opsdog.com, https://opsdog.com/tools/kpis-and-benchmarks  , 2016, (accessed 01 February 2023).
+
+[9] “6 cybersecurity metrics every ciso should monitor”,  www.securityscorecard.com, https://securityscorecard.com/blog/cybersecurity-metrics-cisos-should-monitor,   7 December 2020  , (accessed 31.01.2023).      
+
+[10] A. Volchkov, “How to measure security from a governance perspective.”, ISACA Journal, 2013, [Online] Available:   www.isaca.org/archives
+
+[11] A. A. Cárdenas, P. K. Manadhata, S. P. Rajan, “Big data analytics for security”, IEEE Security & Privacy, vol. 3, no. 6, pp. 74-76, 2013.
+
+[12] M. Kelly, “Assessing the risk of emerging technology: will early assessments match reality?”  , www.isaca.org , https://www.isaca.org/resources/news-and-trends/isaca-now-blog/2023/assessing-the-risk-of-emerging-technology , 26 January 2023 ,  (accessed 03 February 2023). 
+
+[13] “Open information security management maturity model (o-ism3), version 2.0”,  www.publications.opengroup.org , https://publications.opengroup.org/c17b ,  The Open Group, USA, 2017, 
+
+[14] H. Kruger, A. Kearney, W., D., “A prototype for assessing information security awareness. “Computers & Security, Vol. 25(4), pp. 289-296., 2006.  
+
+[15] S. Allam, S. Flowerday, V., E. Flowerday, “Smartphone information security awareness: A victim of operational pressures.”, Computers & Security, vol. 42, pp. 56 -65., 2014.
+
