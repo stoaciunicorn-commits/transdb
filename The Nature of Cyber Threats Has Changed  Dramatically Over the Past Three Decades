@@ -1,0 +1,137 @@
+
+
+
+
+The Nature of Cyber Threats Has Changed 
+Dramatically Over the Past Three Decades
+
+February 2023
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ABSTRACT-Today, it is not possible for countries, businesses and institutions to survive or even exist without information technology.
+    In the last 30 years, while the rapid developments in information technologies and advances in computer hardware have been consistently drawing upwards, significant investments have been made in information systems, software, and communication devices as a result of technological developments and changes that are difficult to predict.
+    Countries, institutions and companies have suffered great damage in these last 30 years by cyber attacks which they occur as a result of rapidly developing and changing information systems, have a faster effect, have a less risky, increase in complexity and number day by day, are difficult to detect and track, have much less costly than physical attacks.
+    This report aims to analyse the researchers that has been done to evaluate the possible future contributions and adverse situations that may be encountered in order to predict where cyber threats have reached in the last thirty years and at what point these cyber threats may be in the next ten years.
+Key words: Cyber Attacks, Cyber Security, Cyber Threats, Cyber Attackers, Big Data, Internet of Things(IoT), Artificial Intelligence(AI), Malware Attacks, Ransomware Attacks, Cyber War, Morris Worm.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    I. INTRODUCTION
+    In today's world, information systems are very important for countries, institutions, business and people to do their jobs. In fact, it seems impossible to exist and survive in many industries without information technologies [1].
+    In the last few decades, countries, institutions and organizations have realized the success and benefits they want to obtain from information systems by transforming data into useful information. 
+    Despite having an important knowledge in transformation of data into information, it is still a matter of debate whether awareness and precautions are sufficient to achieve the desired success in the cyber security field for the cyber security threats which are constantly changing and renewing themselves in direct proportion with the developing technology [2]. 
+    In November 1988, Robert Tappan Morris, whose father was a cryptography specialist, started his graduate education with 19 other students at Cornell Uni to specialize in the internet, which was just beginning to spread in the world at that time.
+    It was a question or a matter of research for him to understand how big the Internet was. He wrote a programme that circulates from computer to computer to determine how many devices are connected to the Internet while which was sending the information from each computer is connected to the Internet to the control server. 
+    Today, the programme called the Morris Worm that had pulled traffic from all devices which connected to the Internet, and it had completely destroyed the Internet by creating excessive traffic load. It took about 72 hours to get rid of the Morris worm, which infected 10% of the devices connected to the internet globally, and hundreds of dollars had to be spent to clean the worm from a one system [3], [4].
+    Since Morris' main purpose was not to create a cyber threat, he  apologized for the mistake he had unconsciously made. But this was the beginning of the periods when real criminals deliberately carried out cyber attacks somewhere in the world every day.
+    Cyber threats continued to increase with the release of these malicious software called Worms, which are malicious software that infiltrated computer systems without the consent of individuals, from 1988 to the mid-2000s, with the discovery of one after another, see pic. 1. 
+    The number of infected devices doubled within 10 seconds with this cyber threat, which spread very quickly. These malware cyber attacks, which can render computers or networks inoperable, hide itself, reproduce itself or even worse,  that give attackers the chance to remotely control the system, were responsible for 25% of all spam messages sent at that time. In addition, that is caused approximately $100 billion in damage and recovery costs, it has also opened the door to a new dimension of cyber threat called Huge Botnet Networks used to send spam. [5] 
+
+    In the period from the mid-2000s to the mid-2010s, cybercrime has reached such dimensions that it can become a business line and a weapon of war.
+    The cyber attack on Estonia in 2007, known as the first systematic and serious cyber attack in which communications, bureaucracy, and banking were paralyzed for 13 days, that has gone down in history. Again, in this period, while spam cyber criminals working like organized crime organizations were spamming users with product advertisements, kits exploiting system vulnerabilities began to spread [6].
+    In the same period, it is thought that the Storm botnet has compromised the security of approximately 10 million devices [5]. In the years of 2009-2010, STUXNET have proven how to target physical systems with cyber weapons and freeing the Zero-Day attacks unknown until this period, as if demonstrating that cybercrime can now be used to gain financial gain. Also in this period, the emergence and rise of ransomware and cryptocurrencies has taken its place as a new money-making method among cybercriminals.
+    Ransomware, estimated at trillions of dollars in losses over the past decade, has remained a consistent threat, see Pic. 2.  There has been a shift in strategy for malware developers from ransomware to cryptocurrency mining in this time. In the WannaCry attack carried out by a hacker group called Shadow Brokers in 2017, the attackers demanded payment in bitcoin. Again in June of the same year, a more advanced version of WannaCry which that called Notpetya cyber attack, and followed by Ethereum cyber attacks took place with the stolen of approximately $40 million in total .  Also  150 million people's  personal data were stolen in the Equifax attack [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18].
+
+    In these last few decades, there have been many different types of cyber attacks such as viruses, worms, trojan horses, backdoors, ransomware, spyware, infiltration of spam, botnets, identity attacks towards online payment methods, and even government-sponsored cyber attack techniques in this period. With the impact of new approaches such as Internet of Things, Big Data, Deep Learning, Artificial Intelligence, and Quantum Computing, cyber security threats and risks have become more and more complex [19]. 
+    Today, there is a rapid increase in data capacity with Big data, Internet of Things and Artificial Intelligence approaches. Thus, the number of IoT devices worldwide is projected to increase to 41.6 billion by 2025, and the amount of digital data to reach 175ZB in 2025 with an annual increase of 19.2%. McAfee Labs has recorded an average of five new malware models per second and that  has analysed an average of 2,400,000 URLs and 700,000 files per day, with its product allowing to see and analyse real-world attack patterns [20].
+    In the GIV 2025 report, which is based on information on Huawei's commercial strength and industry trends, it is suggested that there will be 40 billion AI-enabled personal smart devices and 100 billion connections worldwide by 2025 [21]. 
+    In the next 10 years, the war between good and evil in the cyber world will gain a new dimension with the use of tools, techniques and methods developed by using the advantages of Big Data and Artificial Intelligence-based technologies for both defence and attack [22].
+  
+    In this direction, techniques such as Machine learning and Deep Learning that enable the discovery and interpretation of hidden patterns pose a potential threat that erroneous data to be injected by malicious attackers and Artificial Intelligence models can also be used to potentially find security vulnerabilities [24], [25], [26]. 
+    Artificial Intelligence can learn new things by spread smart malwares and ransomwares    and global cyber attacks may occur which that be controlled by Machine Intelligence. In a much worse scenario, customized attacks can be made from the analyses developed with learned behaviour and behaviour tracking [27], [28], [29], [30]. 
+    Cyber threats which have quite a lot of features to identify, increase the potential of critical cyber security infrastructure to become a targets of Artificial Intelligence which has developed, changed in size and direction and became more complex with Big Data in the last 10 years, see Pic. 3. 
+    The proliferation of data thefts, the activation of state-sponsored cyber hackers, and the transformation of cyber threats into war, proliferation of cybercrime and criminals, There is a need more than ever to combat cyber attacks, crimes, terrorism, and vulnerabilities [31], [32]. 
+    Some states that seek international advantage and want to establish superiority, employees who want to take revenge, rivals who want to gain intelligence, criminals who want to make money, hacktivists with political/religious/ideological purposes, hackers who aim to test their abilities   will continue to continue their cyber attacks by increasing their malicious activities by taking advantage of the cyber security awareness disadvantage that has not yet been fully formed in cyber defence [33], [34].
+
+
+CONCLUSION & RECOMMENDATIONS
+
+    With the proliferation of information systems, the threats that may occur during the production, processing, storage and transmission of strategic information, which is the basis of the cyber assets of countries, organizations and business continue to be potential cyber attack targets.
+    A good understanding of the cyber world, which consists of interactively interconnected network structures, end-user devices, servers, services, etc., is important in order to predict and be prepared for cyber threats to be encountered in the future.
+    There are many reasons for attacks on cyber systems. As these cyber attacks take place for big reasons such as protecting national interests, which are called inter-country cold wars and including developed countries, they are also curiosity, self-gratification, harm, neutralization, gaining money and reputation, It also occurs for reasons such as reducing or destroying of reputation, learning or harming national privacy, obtaining political or religious interests, carrying out terrorist activities.
+    Since attacking or infiltrating cyber systems can occur in other than the most obvious or most anticipated methods, a comprehensive and comprehensive assessment of occurred cyber attacks or potential cyber threats can be effective in reducing the cyber security risks that may occur.
+    Big Data, Internet of Things, Artificial Intelligence, Quantum Learning and Deep Learning, which have undergone a great transformation in the last few decades, are becoming increasingly multifaceted and intricate. For this reason, narrowing the feature area by generalizing each feature within itself may be beneficial in raising awareness and producing solutions against cyber threats that may occur. 
+    The breakthroughs that the Big Data approach, which are increasingly adopted and used, will make with Internet of Things (IoT), Artificial Intelligence, Deep learning, Machine Learning and Quantum Learning will bring new threats and dangers in traditional cyber security solutions. Therefore, considering the rapid and complex development of these areas, the preparation of new cyber security approaches can be effective in reducing the cyber security threats that are thought to emerge.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+REFERENCE
+[1] www.gov.wales , https://www.gov.wales/innovation-strategy-wales-html   “Innovation strategy for Wales”,   20 July 2022. (Accessed 11 February 2023). 
+[2] www.gov.uk , https://www.gov.uk/government/statistics/cyber-security-breaches-survey-2022/cyber-security-breaches-survey-2022 , “Cyber security breaches survey 2022”,   Department for Digital, Culture, Media & Sport, 11 July 2022 . (Accessed 09 February 2023). 
+[3]  www.fbi.gov ,  https://www.fbi.gov/news/stories/morris-worm-30-years-since-first-major-attack-on-internet-110218#:~:text=Within%2024%20hours%2C%20an%20estimated,and%20propagate%20on%20their%20own, “The Morris Worm. 30 years since first major attack on the internet.”, 2 November 2018 .  (Accessed 08 February 2023). 
+[4] D. Maynor, “Metasploit toolkit for penetration testing, exploit development, and vulnerability research.”, Elsevier, 2011.
+ [5] J. Shier, “Cyberthreats: A 20-year retrospective”, Sophos, December 2020. (Accessed 08 February 2023).
+[6] www.en.wikipedia.org ,  https://en.wikipedia.org/wiki/2007_cyberattacks_on_Estonia , “2007 cyberattacks on Estonia”, 9 November 2022. (Accessed 11.02.2023).
+[7] www.en.wikipedia.org ,   https://en.wikipedia.org/wiki/WannaCry_ransomware_attack, “ WannaCry ransomware attack”, 20 December 2022. (Accessed 10 February 2023).
+[8] www.en.wikipedia.org ,   https://en.wikipedia.org/wiki/2018_Atlanta_cyberattack , “
+Atlanta government ransomware attack”, 30 September 2022. (Accessed 10 February 2023).
+[9] www.en.wikipedia.org ,    https://en.wikipedia.org/wiki/2019_Baltimore_ransomware_attack  , “ 2019 Baltimore ransomware attack “, 30 September 2022, (Accessed 10 February 2023).
+[10] www.en.wikipedia.org ,   https://en.wikipedia.org/wiki/Luas_cyberattack, “Luas”,  28 January 2023, 8 December 2022. (Accessed 10 February 2023).
+[11] www.en.wikipedia.org ,   https://en.wikipedia.org/wiki/Harris_Federation#Ransomware_attack  , “Harris Federation”, 8 December 2022. (Accessed 10 February 2023).
+[12] www.en.wikipedia.org ,   https://en.wikipedia.org/wiki/Health_Service_Executive_cyberattack , “Health Service Executive ransomware attack”, 10 February 2023  (Accessed 10 February 2023).
+[13] www.en.wikipedia.org ,   https://en.wikipedia.org/wiki/Colonial_Pipeline_cyberattack , “Colonial Pipeline ransomware attack “, 5 February 2023 . (Accessed 09 February 2023).
+[14] www.en.wikipedia.org ,   https://en.wikipedia.org/wiki/JBS_S.A._cyberattack , “ JBS S.A. ransomware attack “, 5 December 2022 . (Accessed 09 February 2023).
+[15] www.en.wikipedia.org ,   https://en.wikipedia.org/wiki/Steamship_Authority_cyberattack , “Steamship Authority”, 5 February 2023. (Accessed 09 February 2023).
+[16] www.en.wikipedia.org ,   https://en.wikipedia.org/wiki/Kaseya_VSA_ransomware_attack  , “
+Kaseya VSA ransomware attack “, 20 December 2022. (Accessed 09 February 2023).
+[17] www.en.wikipedia.org ,   https://en.wikipedia.org/wiki/2022_Costa_Rican_ransomware_attack , “2022 Costa Rican ransomware attack”, 5 January 2023. (Accessed 09 February 2023).
+[18] www.en.wikipedia.org , https://en.wikipedia.org/wiki/Petya_and_NotPetya, “Petya and NotPetya”, 29 December 2022. (Accessed 11 February 2023).
+[19] www.wired.com, https://www.wired. com/story/2017-biggest-hacks-so-far/ ,  “The biggest cybersecurity disasters of 2017.  So Far LILY HAY new man security”, 1 July 2017,
+[20] C. Beek, T. Dunton, S. Grobman, M. Karlton, N. Minihane, C. Palm, E. Peterson, R. Samani, C. Schmugar, R. Sims, D. Sommer, B. Sun, “McAfee labs threats report - June 2018”, McAfee, 2018.
+[21] www. huawei.com , https://www.huawei.com/minisite/giv/Files/whitepaper_en_2018.pdf   , “GIV 2025 the Industry blueprint of an intelligent world”. (Accessed 07 February 2023.
+[22] www.gov.uk ,  https://www.gov.uk/government/publications/defence-artificial-intelligence-strategy/defence-artificial-intelligence-strategy ,  “Defence artificial intelligence strategy”, Ministry of Defence , June 2022. (Accessed 10 February 2023).
+[24] C. Berghoff, M. Neu, A. von Twickel, www.ncbi.nlm.nih.gov , https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7931957/ , “Vulnerabilities of connectionist ai applications: evaluation and defense,” National Library of Medicine National Center for Biotechnology Information,  20 July 2022. (Accessed 11 February 2023.
+[25] X. Chen, C. Liu, B. Li, K. Lu, D. Song, “Targeted backdoor attacks on deep learning systems using data poisoning.”, 2017. [Online Available]: https://www.researchgate.net/publication/321873202_Targeted_Backdoor_Attacks_on_Deep_Learning_Systems_Using_Data_Poisoning
+
+[26] M. Barreno, B. Nelson, R. Sears, A. D. Joseph, J. D Tygar, “Can machine learning be secure, ACM Symposium on Information, Computer and Communications Security, ASIACCS 2006, pp. 16-25, March 2006. {Online Available]: https://dl.acm.org/doi/abs/10.1145/1128817.1128824 
+[27] M. Baccala, C. Curran, D. Garrett. S. Likens, A. Rao, A. Ruggles, M. Shehab, “2018 AI predictions 8 insights to shape business strategy”, PwC, 2018. [Online Available]: https://www.pwc.es/es/home/assets/ai-predictions-2018-report.pdf
+[28] E. Blanzier, A. Bryl, “A survey of learning-based techniques of email spam filtering.” Artificial Intelligence Review, vol. 29(1), pp. 63-92. 2008. [Online Available]: https://link.springer.com/article/10.1007/s10462-009-9109-6
+[29] J. Clements, Y. Lao, “Hardware trojan attacks on neural networks.”, Department of Electrical and Computer Engineering Clemson University, Clemson, SC 29634, 14 June 2018.  [Online Available]: https://arxiv.org/pdf/1806.05768.pdf
+[30] D. Lowd, C. Meek, “Adversarial learning, in proceedings of the eleventh”, ACM SIGKDD, International Conference on Knowledge Discovery and Data Mining, pp. 641–647, August 2005. [Online Available]:  https://dl.acm.org/doi/10.1145/1081870.1081950
+[31] www.media.telefonicatech.com , https://media.telefonicatech.com/cybercloud/uploads/2023/2/security-status-report-2022-h2-es.pdf , “Informe sobre el estado de la seguridad 2022 H2”, 2022. 
+[32] X. Zhu, C. Vondrick, C. C. Fowlkes, D. Ramanan, “Do we need more training data?”, 5 Mar 2015. [Online Available] : https://arxiv.org/abs/1503.01508
+[33] O.I. Stasuk, L.L. Goncharova, “Differantial mathematical models to investigate the computer network architecture of an all-mode Systems of control over a distance of railways, Cybernetics and systems Analysis.”, vol.53, no.1, p.p. 157-164, 2017. 
+[34] S. Mei, X. Zhu, “Using machine teaching to identify optimal training-set attacks on machine learners.”, Twenty-Ninth AAAI Conference on Artificial Intelligence, 25 January 2015.
+
