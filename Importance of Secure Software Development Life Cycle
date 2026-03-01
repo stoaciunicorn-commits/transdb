@@ -1,0 +1,58 @@
+Importance of Secure Software Development Life Cycle
+(SDLC) and Security
+Ebru Kemikkiran
+North Wales Management School
+Wrexham Glyndŵr University
+Wales, UK
+24.06.2024
+In today's world, influenced by digital transformation, software development plays
+a critical role across all sectors. In this context, software security is not only the
+responsibility of developers but also of the entire team and company. The Secure
+Software Development Life Cycle (SDLC) aims to enhance the security of software
+products by integrating security at every stage.
+What is SDLC and Why is it Important?
+Traditionally, security tests were conducted in the final stages of the development
+process, often leading to the release of insecure code. However, in our world where
+technology permeates nearly every aspect of life and the use of artificial intelligence
+is rapidly increasing, creating secure software architectures, writing secure code, and
+implementing hardware security measures are becoming increasingly important.
+Integrating security from the beginning of the process is crucial for increasing control
+and predictability and preventing higher costs. In this context, SDLC ensures that
+software is more secure and reduces costs by identifying security vulnerabilities early
+[1]. Early detection means identifying design flaws before they are coded, which
+reduces correction costs. Additionally, risk reduction decreases the intrinsic business
+risks and increases security awareness among all stakeholders [2].
+How to Implement Secure SDLC?
+Successfully implementing a Secure Software Development Life Cycle (SDLC)
+requires integrating security tests and other critical security activities into existing
+development processes. This process has three main components: defining security
+requirements, conducting architectural risk analysis, and using code scanning tools.
+The first step in Secure SDLC is defining security requirements alongside functional
+requirements. This stage helps reduce security risks at the start of the software
+development and contributes to creating more secure software. For instance,
+specifying that users can only view their information is crucial. Clearly defining
+security requirements ensures that security vulnerabilities are minimized throughout
+the software's life cycle [3].
+During the design phase, it is necessary to conduct an architectural risk analysis. This
+analysis evaluates the design from a security perspective and identifies potential
+security vulnerabilities early. Architectural risk analysis plays a critical role in
+identifying security threats at an early stage and taking measures against them. Thus,
+the security of the software is enhanced from the design phase.
+In the coding process, using code scanning tools is a vital part of Secure SDLC. Tools
+such as static analysis, dynamic analysis, and interactive application security testing
+are used to detect and resolve security vulnerabilities. These tools provide developers
+with immediate feedback on the security status of the code they write, ensuring the
+code is secure. Particularly, static application security testing (SAST) and dynamic
+application security testing (DAST) are effective methods for detecting and
+addressing security vulnerabilities [2].
+In addition to these fundamental practices and requirements, it is important for
+stakeholders to receive up-to-date information and training on SDLC and its
+applications. Ongoing risk analyses and test planning should also be considered to
+increase the success rate of the projects.
+In conclusion, SDLC practices help reduce costs by identifying security
+vulnerabilities early in the software development process and increasing the overall
+security of the software .
+REFERENCES
+[1] https://www.paloaltonetworks.com/
+[2] RED HAT https://www.redhat.com/en/topics/security/software-development-lifecycle-security
+[3] https://www.synopsys.com/blogs/software-security/secure-sdlc.html
