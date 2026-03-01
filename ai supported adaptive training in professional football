@@ -1,0 +1,323 @@
+visualization tools make it accessible not only to elite clubs but also to amateur and
+semi-professional teams seeking to incorporate data and video analytics into training
+planning [15].
+● Other Systems and Applications: In addition to the examples above, many innovative
+wearable devices contribute to the adaptive training ecosystem. The WHOOP wristband,
+for example, tracks internal load parameters such as heart rate, heart rate variability
+(HRV), and sleep quality throughout the day [1]. It analyzes this data using cloud-based
+AI to provide a recovery score and personalized daily training recommendations.
+Athletes receive color-coded feedback—such as “green” (ready) or “red” (fatigued)—and
+can adjust their training accordingly [1]. Similarly, Intel’s 3D Athlete Tracking (3DAT)
+system uses cameras and AI to analyze movement in three dimensions in real time. It
+captures data on running technique, stride length, and joint angles to help improve
+technical form. In football specifically, devices like Playermaker, which attach to the
+ankle, collect detailed technical data such as number of ball touches, use of both feet,
+and step symmetry. Using AI, the device then recommends drills to improve technique
+[15]. In the endurance sports domain, apps like TrainAsONE and Xert offer continuously
+adaptive training plans for amateur runners and cyclists, demonstrating how the concept
+of AI-driven training is becoming widespread across all levels [15].
+In summary, both academic research and commercial products have established the practical
+viability of AI-assisted training. Teams are able to monitor training data in real time with
+STATSports and Catapult, integrate tactical and technical insights using Metrica, and take
+proactive steps to protect player health with tools like Zone7. This multifaceted ecosystem has
+elevated professional training planning to a more scientific, data-driven, and personalized level.
+V. INTEGRATING WEEKLY TRAINING PLANS WITH REAL-TIME
+FEEDBACK
+In football, a microcycle (typically a week-long training plan) involves pre-planning the
+distribution of physical loads and rest days throughout the week. However, real-time data
+collected from players may necessitate fine-tuning of this plan. The key to integration lies in
+establishing a balanced interaction between long-term planning and short-term feedback. In
+other words, while weekly goals and periodization provide a framework, the player’s day-to-day
+condition and training responses allow for adjustments within that framework [13].
+In practice, integration works as follows: at the start of the week, coaches prepare a weekly
+training load schedule based on the match calendar (e.g., strength training on Monday, high-
+intensity training on Tuesday, active recovery on Wednesday, etc.). This plan follows scientific
+periodization principles and aims to have players in peak condition by the weekend [13]. For
+example, as match day approaches, training intensity typically tapers down, while midweek
+sessions may include higher loads to maintain fitness. As the week progresses, GPS and
+biometric data collected from players continuously monitor how well the plan is being followed.
+Suppose Wednesday’s data indicates that a key player is more fatigued than expected, has had
+poor sleep, or hasn’t fully recovered from the previous session—an adaptive system could use
+this information to lighten Thursday’s training session. This prevents overexertion and better
+prepares the player for the weekend match.
+Adaptive algorithms aim to align such micro-level changes with the broader macro plan. For
+instance, in a study by Connor et al., an AI-driven feedback system monitored daily training
+loads within a 12-week program and automatically adjusted future session intensities if there
+were deviations from target goals [5]. Even when unexpected events occurred (such as injury,
+illness, or early termination of training), the system was able to re-optimize the remaining
+sessions to stay on course with the overall training objectives. Results showed that this
+approach significantly reduced deviations from the planned workload compared to traditional
+methods [5]. Essentially, the system adheres to the goal of achieving the “total weekly training
+load” while making necessary daily adjustments.
+Another important approach is integrating scientific metrics such as the Acute:Chronic
+Workload Ratio (A:C). Weekly planning must ensure that a player’s acute (1-week) training load
+remains within a safe range relative to their chronic (4-week) load average. Feedback systems
+calculate this ratio in real time to verify whether the training is progressing as planned. If a
+player’s A:C ratio exceeds the upper threshold of 1.5 (indicating the past week’s load is much
+higher than usual), the system may suggest reducing the workload for the rest of the week [13].
+Conversely, if the load is below target, it may recommend additional individual sessions. This
+ensures that periodization principles are upheld with adjustments informed by real-time data.
+Today, some AI-driven platforms automate this integration process. For example, Xert, an app
+used in running and cycling, offers a continuously adaptive training schedule instead of a fixed
+program. Its Adaptive Training Advisor evaluates the athlete’s condition after each session and
+updates the next day’s session accordingly. As a result, scenarios like “I couldn’t follow today’s
+plan” or “I feel great today, what should I do?” are predicted and accommodated within the
+system. Such platforms make feedback integration user-friendly and accessible, even for
+amateur athletes. At the professional level, this integration is usually overseen by performance
+scientists and coaches. AI systems generate recommendations, and humans make the final
+decision [10]. For example, if an AI system reports, “Player X completed 20% less high-speed
+running today than planned; consider adding sprint drills tomorrow,” the coach then considers
+the match schedule and the player’s subjective condition before acting on the suggestion.
+In summary, combining a weekly plan with real-time data feedback has become a modern
+necessity in sports science. Static plans are becoming obsolete, giving way to dynamic,
+predictive strategies. While the weekly program provides a roadmap, real-time feedback
+systems continuously fine-tune that path, keeping the athlete on the safest and most efficient
+trajectory [10]. This approach ensures that both the big picture (season goals, match
+performance) and the daily details (fatigue, motivation) are managed simultaneously.
+VI.PROPOSED TECHNICAL ARCHITECTURE AND COMPONENTS
+To implement such an adaptive training system, a multi-layered technical architecture must be
+designed. In general, this architecture consists of the following components: data collection
+layer, analysis and processing layer, recommendation engine, and user interface:
+● Data Collection Layer:
+This bottom layer gathers data from all sensors and devices worn by the player. These
+may include GPS vests, accelerometers, gyroscopes, heart rate monitors, sleep trackers,
+and possibly ball or ankle-mounted sensors used during training. The raw data from
+these devices (e.g., position coordinates per second, heart rate counts, step counts) is
+transmitted wirelessly to cloud servers either in real time or at the end of the training
+session. For example, the STATSports Apex device can stream data via Bluetooth or
+ANT+ to a receiver on the sidelines, while a wearable like WHOOP syncs data
+continuously to the cloud throughout the day [12]. What matters most at this layer is the
+synchronized and compatible collection of data from different sources and its secure
+storage [12]. All data is stored in a data warehouse or a time-series database.
+● Analysis & Data Processing Module:
+At the middle layer, raw data is transformed into meaningful insights. The first step
+involves cleaning and synchronizing the data (e.g., aligning GPS and heart rate data by
+timestamp, filtering missing or erroneous entries). Then, business intelligence and data
+analytics processes are applied to extract derived features from the raw data. Key
+performance metrics such as total running distance, high-speed distance, number of
+sprints, average heart rate, heart rate variability during training, and RPE (Rate of
+Perceived Exertion) are calculated. In the STATSports system, such metrics, including
+total distance, high-speed running (HSR), and dynamic stress load (DSL) [13], are
+automatically generated and reported. Within this module, the core AI algorithms
+operate. Machine learning models process the incoming data to make predictions and
+assessments:
+○ An injury risk model can generate a risk score based on recent training loads and
+recovery trends.
+○ A performance prediction model can estimate a player’s readiness for match day
+based on current training data.
+○ An anomaly detection system can flag unusual fatigue or performance drops.
+● These analyses may run in real time or after each training session. For instance, the
+system may assess whether a player has progressed or regressed compared to the
+previous day, using machine learning algorithms to benchmark the results. This module
+supports the decision-making process by generating insights using the machine learning
+techniques outlined in Section 3. In complex, multi-source architectures, AI-based
+interpretation—as highlighted in the TTMS study—can reveal intricate patterns that
+human analysts might miss. The analysis module is also responsible for comparing
+calculated metrics and model outputs to predefined thresholds (e.g., calculating the
+Acute:Chronic Workload Ratio) [1].
+● Recommendation Engine (Decision Support System):
+The insights from the analysis module are translated into actionable training
+suggestions. This layer houses rule-based logic and optimization algorithms. For
+example, if the injury risk model shows an 80% risk for a player, the recommendation
+engine might suggest “Assign rest day tomorrow.” Or, if a player’s high-intensity running
+distance over the past three days is below the plan, the system may recommend “Add
+extra interval training.”
+The recommendation engine also takes the coach’s predefined goals and constraints
+into account. For instance, if Friday is intended to be a light session, the system will not
+suggest adding extra load that day. This engine operates using a blend of business rules
+(if-then logic) and trained models. In advanced systems, this module may even be driven
+by a reinforcement learning agent that learns over time which recommendations yield
+the best results. However, in practical settings, the system typically provides a shortlist
+of recommendations.
+● User Interface (UI) and Feedback:
+At the top of the architecture is the interface through which coaches, performance staff,
+and possibly players interact with the system. This interface may be a web-based
+dashboard, a mobile app, or a specialized tablet application. It visually presents
+information from lower layers through charts, tables, alerts, and recommendation lists.
+For instance, the UI might highlight in red that a player has reached 90% of their running
+distance goal but only 50% of their high-speed running target, with a note such as “high-
+speed workload low.” This allows coaches to instantly grasp the situation. Through the
+interface, the coach can approve or modify system suggestions. For example, if the
+system suggests a rest day but the coach wants to schedule a light technical session
+instead, this can be manually adjusted—and the system will learn from it.
+A well-designed UI consolidates the weekly schedule, daily adjustments, and player
+status reports into one view, simplifying the decision-making process. A separate sub-
+interface may also be provided for players to track their own metrics and receive
+personalized feedback (e.g., “You exceeded your running goal today” or “Your heart rate
+was within normal limits”).
+In implementing this architecture, several technical considerations are essential:
+● Real-time capability: The system must process data with minimal latency.
+● Scalability: It should handle data streams from the entire team without performance
+issues.
+● Reliability and security: Data loss must be prevented, and sensitive health information
+must be protected.
+● Integration: The system must be compatible with different devices and data formats.
+Most modern systems are cloud-based, meaning data is processed and stored on internet
+servers. However, as seen in newer STATSports devices, on-device AI (edge computing) is
+becoming a trend. This allows real-time analysis directly on the device—particularly useful for
+instant feedback during training—without needing to transmit data to the cloud first [12]. Still, a
+centralized database and analysis platform remain indispensable for long-term data
+management and complex modeling.
+Lastly, for this architecture to succeed, it must operate in continuous collaboration with the
+technical staff. Recommendations and alerts generated by the system must be filtered through
+human expertise. While the architecture offers automation, the role of the human coach is
+vital—to interpret insights, define goals, and make final decisions. AI assists, but human
+judgment remains central.
+VII. CONSIDERING THE SPECIFIC NEEDS OF DIFFERENT
+FOOTBALL POSITIONS
+When designing adaptive training systems, it is essential to recognize that players in different
+football positions have distinct physical and technical demands. A goalkeeper’s workload
+profile differs greatly from that of a midfielder, and their training focuses and risks also vary. An
+AI-assisted system can account for these positional differences in several ways:
+● Goalkeepers:
+Goalkeepers typically cover much less distance during matches but perform more
+explosive actions (e.g., quick dives, jumps for crosses). According to one study, a
+goalkeeper runs about 5.5 km on a match day, performs only 50–100 meters of
+sprinting, and executes 5–10 high-intensity accelerations or decelerations. These values
+are significantly lower than those of a midfielder. Therefore, an adaptive system should
+apply different workload thresholds for goalkeepers. Instead of tracking running
+distance, it could monitor reaction times, jump height, and kicking range. If a goalkeeper
+completes a high number of explosive actions (e.g., 15+ dives) in a session, the system
+might suggest rest or low-intensity technical training the next day. Due to the nature of
+their role, goalkeepers also require upper body strength and flexibility [16]. The adaptive
+program should periodically emphasize exercises that develop these attributes, such as
+plyometrics and mobility training. Since goalkeepers may remain stationary for long
+periods and then need to react explosively, mental focus drills and active recovery
+techniques may also be integrated.
+● Defenders:
+Defenders can be further divided into center-backs and full-backs. Center-backs perform
+short, explosive movements (e.g., tracking strikers, sudden changes in direction), while
+full-backs tend to cover more distance with up-and-down runs along the flanks. Overall,
+defenders cover a moderate-to-high total distance (~9–11 km per match, with full-backs
+on the higher end). Adaptive systems should closely monitor acceleration and sudden
+speed changes for defenders, especially center-backs, since timing and quickness are
+critical. If a center-back’s number of high-intensity accelerations falls below target, the
+system may recommend additional speed drills. For full-backs, endurance and speed are
+key, so the system should track their high-speed running distance. Strength training is
+also vital for defenders due to frequent physical duels; adaptive plans may incorporate
+more resistance training for defenders compared to other positions. For instance, two
+weightlifting sessions per week might be standard for a defender, while only one may
+suffice for an attacker. An AI-based system can analyze a defender’s in-game stats (e.g.,
+aerial duels won, tackle success) and, if performance drops in those areas, increase the
+strength training volume accordingly.
+● Midfielders:
+Midfielders are typically the players who cover the most distance and have the highest
+aerobic and repeated sprint demands. Elite-level midfielders may run 11–13 km per
+match, much of it at moderate intensity, interspersed with sprints. Adaptive systems
+must pay special attention to recovery capacity for midfielders, as they are often the
+most fatigued during congested match schedules. For example, if a midfielder’s morning
+heart rate variability (HRV) is lower than usual (a sign of fatigue), the system may reduce
+training load for the day. Midfielders also require a broad range of skills, since they
+contribute to both defensive and offensive phases. An adaptive program should aim to
+develop speed, endurance, and agility in a balanced manner. While analyzing midfielder
+data, the system might not prioritize maximum speed as much as for attackers but
+rather focus on total load and intensity distribution. Nevertheless, if a midfielder’s high-
+speed running distance is consistently low, the system may interpret it as a lack of
+explosive speed and recommend targeted sprint training. Since passing accuracy is also
+crucial for midfielders, the system could optimize technical sessions accordingly—for
+instance, planning additional passing drills if a midfielder’s pass completion rate drops
+in matches.
+● Forwards and Wingers:
+Attacking players (forwards and offensive wingers) may run slightly less than
+midfielders overall, but they perform the highest number of high-speed efforts. A forward
+may cover 9–11 km per match, with key actions involving explosive sprints for scoring
+chances or pressing. Adaptive systems should track metrics such as number of sprints,
+maximum speed, and explosive power. If a winger’s top speed during training is below
+their known potential, the system may recommend more speed work. For forwards,
+shooting frequency and accuracy are also important indicators; some systems can even
+track shot efficiency (e.g., percentage of accurate shots). If a forward hasn’t had enough
+scoring opportunities in recent games and sprint metrics are down, the system may
+interpret this as a physical issue (e.g., lack of freshness or sharpness) and reduce
+training load to allow for recovery. Agility and quick changes of direction are also vital
+for these players; systems can monitor 5–10 meter acceleration data or zigzag run tests
+to assess form. Position-specific settings may lead the adaptive algorithm to assign
+more speed and agility drills to attackers, while defenders may receive relatively less
+long-distance running.
+Adaptive systems can also incorporate positional differences during the modeling phase.
+Machine learning models can treat position as an input feature. For example, an injury
+prediction model might use different thresholds for goalkeepers than for midfielders. Likewise,
+rule-based thresholds can be tailored to position—for instance, a rule like “If a goalkeeper
+exceeds 20 km of running in a week, issue a warning” would be irrelevant for midfielders but
+critical for goalkeepers. Research has shown that the relationship between external training
+load and physical characteristics of players depends heavily on their tactical role (i.e., position).
+This underscores the importance of position-specific approaches in adaptive systems [17]. For
+example, a tall, powerful center-back and a short, fast winger differ not only in their match roles
+but also in their training requirements; a well-designed system can recognize and accommodate
+these differences.
+In conclusion, adaptive training systems must function with distinct parameters and objectives
+tailored to goalkeepers, defenders, midfielders, and forwards. The universal aim across all
+positions is to maximize performance and minimize injury risk, but the path to achieving this
+must be position-specific. Sharpening a goalkeeper’s reflexes, increasing a defender’s
+endurance and strength, maintaining a midfielder’s aerobic capacity, and enhancing a forward’s
+explosive speed and finishing—these can all be achieved within the same system via separate
+modules and configurations. A well-structured AI-powered training platform will treat positional
+differences as a personalization layer, ensuring each player receives the most suitable workload
+according to their role. In turn, this enables every part of the team to perform at its best—raising
+the overall level of team performance to its highest potential.
+REFERENCES
+[1] TTMS Blog (2024). AI in Sports – How AI Supports Athletes and Coaches. (YZ’nin sporcuların
+performans takibinde kullanımını ve örnek uygulamaları anlatan yazı)
+https://ttms.com/ai-in-sports-how-artificial-intelligence-supports-athletes-and-
+coaches/#:~:text=and%20collect%20the%20necessary%20data,band%2C%20which%20creates
+%20recommendations%20for
+[2] https://www.playermaker.com/ai-in-soccer/?srsltid=AfmBOorvPztGnKARA58v6L-
+Mtn7PNNYTUZQuUzwwUEV6NYu5F7I1R8My#:~:text=AI%20is%20enabling%20the%20creation,
+player’s%20unique%20needs%20and%20characteristics
+[3] Playermaker (2024). 7 Ways AI Technology Is Used In Soccer. (YZ’nin futbolda kullanım
+alanlarını anlatan makale)
+https://www.playermaker.com/ai-in-soccer/?srsltid=AfmBOorvPztGnKARA58v6L-
+Mtn7PNNYTUZQuUzwwUEV6NYu5F7I1R8My
+[4] IdeaUsher (2023). How to Build an AI-Powered Fitness App. (YZ destekli fitness
+uygulamalarında adaptif zorluk ayarlamalarını açıklayan blog yazısı)
+https://ideausher.com/blog/ai-powered-fitness-app-
+development/#:~:text=AI%20algorithms%20continuously%20monitor%20user,maintain%20safe
+%20and%20effective%20training
+[5] Connor, M. ve ark. (2022). Adaptive Athlete Training Plan Generation: An intelligent control
+systems approach. J. Sci. Med. Sport, 25(4), 351-355. (YZ tabanlı geri besleme denetleyicisi ile
+adaptif antrenman planlamasını gösteren çalışma)
+https://pubmed.ncbi.nlm.nih.gov/34764011/#:~:text=Methods%3A%20%20The%20adaptation%
+20of,ability%20to%20adapt%20future%20training
+[6] Rico-González, M. ve ark. (2023). Machine learning application in soccer: a systematic
+review. Biology of Sport, 40(1), 3-15. (YZ ve makine öğrenmesinin futboldaki kullanım alanlarını
+derleyen sistematik inceleme)
+https://pmc.ncbi.nlm.nih.gov/articles/PMC9806754/#:~:text=that%20through%20algorithms%2
+0such%20as,notational%20analysis%20and%20positional%20data
+[7] https://www.catapult.com/blog/sports-analytics-machine-
+learning#:~:text=Tip%203%3A%20Choose%20the%20Right,Algorithm
+[8]
+https://www.tandfonline.com/doi/full/10.1080/08839514.2018.1505214#:~:text=Performance
+%20www,to%20a%20given%20training%20session
+[9] https://www.linkedin.com/advice/0/how-can-reinforcement-learning-used-improve-
+8dkpf#:~:text=plan%20that%20adjusts%20the%20intensity%2C,Reinforcement
+[10] https://baronbiosys.com/outcome-driven-training-
+plans/#:~:text=In%20recent%20years%2C%20adaptive%20training,year%20ago%2C%20Xert%20
+announced%20the
+[11] Catapult (2024). How Machine Learning in Sports Analytics Unlocks Next-Level Athlete
+Performance. (Catapult firmasının spor analitiğinde makine öğrenmesi ve veri entegrasyonunu
+anlattığı blog yazısı)
+https://www.catapult.com/blog/sports-analytics-machine-
+learning#:~:text=Tip%203%3A%20Choose%20the%20Right,Algorithm
+[12] STATSports (2023). STATSports Launch New AI-Powered Technology. (STATSports
+firmasının yapay zekâ entegre edilmiş yeni nesil giyilebilir teknolojisi duyurusu)
+https://pro.statsports.com/statsports-launch-new-ai-powered-
+technology/#:~:text=From%20advanced%20AI%20capabilities%20enabling,with%20unpreceden
+ted%20accuracy%20and%20reliability
+[13] https://pro.statsports.com/macrocycle-overview-does-player-tracking-aid-periodized-peak-
+performance/#:~:text=As%20can%20be%20seen%20in,higher%20level%20of%20physical%20fo
+rtitude
+[14] https://www.catapult.com/blog/trends-in-
+sports#:~:text=Wearable%20technology%20%2C%20especially%20GPS,training%20and%20injur
+y%20prevention%20strategies
+[15] https://www.playermaker.com/ai-in-soccer/?srsltid=AfmBOorvPztGnKARA58v6L-
+Mtn7PNNYTUZQuUzwwUEV6NYu5F7I1R8My#:~:text=Biomechanics
+[16] Malone, J. (2021). Monitoring Training Load in Goalkeepers. (Kalecilerin
+antrenman/müsabaka yüküne dair istatistikleri ve farklılıklarını aktaran analiz)
+https://maloneperform.substack.com/p/monitoring-training-load-in-
+goalkeepers#:~:text=Monitoring%20Training%20Load%20in%20Goalkeepers,10%20high%20acc
+elerations%2Fdecelerations
+[17] Vardakis, L. ve ark. (2023). Differences in Physical Indexes between Football Players of
+Different Playing Positions and Correlation to the Weekly Training Load. Appl. Sci., 14(11), 4469.
+(Farklı pozisyonlardaki futbolcuların antrenman yükleri ve fiziksel parametreleri arasındaki
+ilişkiler üzerine akademik çalışma)
+https://www.mdpi.com/2076-
+3417/14/11/4469#:~:text=MDPI%20www,correlated%20with%20their%20physical%20indexes
