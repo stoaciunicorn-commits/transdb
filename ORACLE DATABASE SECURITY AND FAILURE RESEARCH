@@ -1,0 +1,154 @@
+
+
+ORACLE DATABASE SECURITY AND FAILURE RESEARCH
+
+
+October 2022
+Abstract--Information systems are an indispensable element of companies, public institutions and even individuals today, which we call the digital age. In digital environments, individuals, companies, and public institutions talk to each other and share their information and systems with each other.
+In such communications, database one of the most basic system components and it will continue to exist, regardless of the technological innovations in the systems and infrastructures of the parties.
+This report is research conducted on the security threats and types of failures that may occur in the Oracle database environment. It is also a report that objectively evaluates the various security measures, backup and recovery strategies that can be applied to procure data security, usability, and entirety for the business.
+
+Keys--- Authentication, Resource Use Authorization, Access Control, Redaction, Virtual Private Database, Mirroring , Audit Vault,  Database Firewall, Encryption, Backup, ARCHIVELOG, RMAN.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    I. INTRODUCTION
+Today, protecting, managing, safely using, and distributing data is priceless for business and that may be more important than producing information for business. 
+Database: It is a data management system under the responsibility of database administrators, where data is kept as much as possible, it is capability to return within the data lifecycle, reporting, monitoring, and access are provided with certain rules. In addition database security becomes more critical with increasing data and developing technological innovations. 
+In order to protect high-sensitivity data, the essentials for database security mentioned in the literature are [1]:
+    • Confidentiality
+    • Integrity
+    • Availability 
+A. Database Failures and Security
+It is one of the basic components of security database systems.  In databases consisting of layers, an unsafe or failure layer negatively affects the upper or lower layers. Thus, separate security structures should be implemented at each stage of the database systems architecture [2]. The elements that may threaten the security of the database and the failures that occurs about that security can be listed as follows [3], [4]; 
+    • Excessive Abuse of Authorization, which leads to data extortion or obtaining unwanted information by performing functions that should not be authorized.
+    • Legitimate Abuse of Authority, which is the misuse of information with the misuse of the given authority.
+    • Authority Upgrade, which is the user's elevation of his authority to database administrator authority by using software technique with the given authority.
+    • Database Platform Vulnerabilities, which is the inactivation of the database by exploiting the vulnerabilities of the operating systems used in the database.
+    • SQL Injection, which allows attackers to access the target database with unrestricted privileges, usually with an unauthorized bus joint to a vulnerable SQL data channel (this can often be stored procedures or web application login parameters).
+    • Weak Inspection Tracking in the absence of instant detection and recovery system for failure and security in databases.
+    • It is Denial of Service, which is the inability to do business as a result of the inability to read the data, data corruption and high-level performance loss with DoS (Denial of Service) attacks.
+    • Weak Authentication, where the attack is done using brute force, social engineering, and outright phishing.
+    • It is the Revealing of Backup Data, which is data theft with an attack on the backup of the backed-up database.
+B. Security And Failures in Oracle Database
+1. Authentication
+Oracle has the technical infrastructure to determine security principles on user passwords and some algorithms are used in this process. These algorithms are creating data access objects, embedded authentication, keeping user and password in database tables, creating database user, establishing integrated structure (SSO, Single Sign On).
+The most appropriate of these methods may be to create a database user or to establish an integrated structure [5].  
+It is also available in packages that provide encryption in Oracle products. With these packages, the columns of the tables or the datafile can also be encrypted. However, this software writes the connection clause into the codes while connecting to the database. Although these codes cannot be read when executable, the possibility of revealing usernames and passwords through reverse engineering operations may pose a security threat, “Fig1”, [6]. 
+
+2. Resource Use Authorization: It is the process that controls which module or object can be accessed by the user and to what extent. While defining the user profile, which is the first authorization in Oracle, restrictions can be introduced such as how many logins the user can log in at the same time and that he/she cannot consume more from their resource for the user. With the role, the user's movements on objects can be authorized [7].  
+3. Access Control: It contains user access restrictions. There are some access control techniques that can be used in Oracle.
+the first one is redaction and there are four editing styles in redaction. These are:
+    • full.
+    • partial.
+    • regular expression.
+    • random.
+With this technique, extremely sensitive information is formatted on the fly in memory while presenting the data without making any changes to the disk. data can be shaded completely or partially in this process. To apply this technique in Oracle database, DBMS_REDACT.ADD_POLICY package must exist in Oracle database system and the administrator must have execute privilege. In addition, the policies of the security package should be set to ENABLE, “Fig.2.”, “Fig.3.”  [8], [9]. 
+  
+
+Another is the Virtual Private Database method. With this method in Oracle database, it is possible to hide data on a column-based basis. With this method, it uses the user database as a customized virtualized database. To use this method, the DBMS_RLS package must be available, and the package's procedure must be called into the system, “Fig.4.” [10]. 
+
+At the same time, database mirroring allows the application to access the database through the other server when the server with the database at the database level becomes unserviceable. For this, the database must run in fully recovery mode. Also, if mirroring has stopped, all transaction log backups in the primary database should be restored to the secondary server with no recovery before restarting. Principal instance, mirroring instance and witness instance are needed for the backup server to be activated in case of a problem, “Fig.5.” [11]. 
+
+Another technique is the data masking method. With this method, real and highly sensitive information can be masked, and unauthorized access requests and permissions can be prevented. Oracle Enterprise Cloud Control package should be used for this method [12].  
+4. Auditing: It is the supervision of the user's movements on the system. With this method, users' track records can be traced and undeniably proven. Oracle offers three types of inspection options here [13]; 
+    • Auditing the database
+    • Value-based auditing
+    • Fine-grained inspection
+To take advantage of this application, it requires the configuration file called AUDIT_TRAIL to be set. However, the point to be noted here is that another layer responsible for the inspection process should be created for very fast-growing track records.
+With Oracle Audit Vault and Database Firewall packages, it is possible to prevent expected errors and SQL injections from the network, “Fig.6.”, “Fig.7.”, “Fig.8.”, [14].
+  
+     
+
+5. Encryption: It is the process that enables the data to be converted into a format that cannot be understood with special techniques. 
+For this, data files must be kept encrypted and isolated from the application layer. Since the data files are encrypted in this way, their backups will also be kept encrypted [15]. 
+For this, Transparent Data Encryption (TDE) is used in Oracle. However, the most important point here is that if an encryption is to be made on a column basis, it should be noted that the relevant column is not a foreign key and an index cannot be defined. In this way, it may be more appropriate to encrypt the tablespace.
+Also, another point to be noted here is that the encrypted table space may be compressed. In this case, firstly, the compressed file must be decompressed and then encrypted.
+6. Backup
+The main thing in the backup plan should be to recover the database as soon as possible. Oracle can perform backup at the operating system level with its own file management (physical) and logical methods called RMAN (recovery management).
+When Oracle Database is closed, it can make hard copy with classical backup logic and that backs up data files, parameter files, control files, files where the database is physically located in another disk environment. The point to be considered in this technique is; It should done with Optimal Flexible Architecture compatible directory naming and layout for Oracle to read the files when the database is opened [16]. 
+While the database is open, it is possible to make a backup with some special commands since the files are processed instantly. The point to be considered for this is that the database is running in ARCHIVELOG (It is the mode that can be set during the opening stages of the Oracle database.) mode. Next, the logical level of the data files the corresponding tablespaces mod should be pulled into backup, “Fig.9.”, “Fig.10.”.
+
+
+These 2 techniques have the constraints of redundant backup of empty spaces at the enterprise level and having to change the mode of the tablespaces.
+Instead, RMAN software can be used to back up the entire database or individual tablespace, archive logs, and avoid unnecessary backup costs. However, if the database is not closed properly, it can take the backup as inconsistent.
+For these, the RMAN catalogue must be constantly synchronized. After that, RMAN will automatically back up the database and automatically perform system recovery by applying archive logs in case of any failure, “Fig.11.”.
+
+RMAN is a tool that works independently of the operating system, and RMAN's command structure is divided into stand-alone commands and commands that need to run in groups.
+The below give example about group command of RMAN, “Fig.12.”, “Fig.13.”.
+   
+
+If the database needs to work with zero interruption, using methods such as replication, parallel server It is necessary and for hundred percent recovery, the backup of the archive logs should be complete and intact in the system as soon as possible, “Fig.14.”.
+
+    II. CONCLUSION
+Accessibility, security, and failures on the database metrics were determined, their values were examined, and possible solutions were reported through references and examples.
+It is possible to prevent database failures and security vulnerabilities that may occur in the database through methodologies, created algorithms and Oracle's software packages.
+However, in backup strategies, the RMAN methodology shows that it will give faster and more robust results compared to the backup methodology applied when the database is closed and open.
+At the same time mirroring methodology can provides opportunity to use database without interrupting.
+But ultimately, the biggest role in database systems, whether it's Oracle software packages or best-functioning algorithm, only can work it on best possible with administrators' job tracking.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+REFERENCES
+[1] P. Sharma, “Database security: attacks and techniques”, International Journal of Scientific & Engineering Research, vol. 7, Issue 12, pp. 313, December 2016. [Online] Available: https://www.ijser.org/researchpaper/Database-Security--Attacks-and-Techniques.pdf
+[2]”database security” IBM Cloud Education, 27 August 2019, www.ibm.com, https://www.ibm.com/cloud/learn/databasesecurity?mhsrc=ibmsearch_a&mhq=ibm%20cloud%20database%20security   (accessed 27 September 2022)
+[3] D. Kish, B. Lowans, “Market trends: database security”, Worldwide, GARTNER, 09 May 2017. [Online] Available:  https://go.mariadb.com/GLBL-WC2017GartnerSecurityReprint_LP-Registration.html 
+[4] H. Bediar, “Challenges and security vulnerabilities to impact on database systems”, Middle Technical University, IRAQ, vol. 29, Issue 2, 2018. [Online] Available: DOI: http://doi.org/10.23851/mjs.v29i2.332   
+[5] “White paper, best practices for gathering optimizer statistics with oracle database 12c release 2”, Oracle, June 2017, www.oracle.com, https://www.oracle.com/technetwork/database/bi-datawarehousing/twp-bp-for-stats-gather-12c-1967354.pdf   (accessed 27 September 2022)
+[6] R. Mehta, “Oracle database security”, pp. 40-52, 21 Dec 2006. [Online] Available:  https://doi.org/10.1201/1086/44797.13.5.20041101/84908.6
+[7] E. Bertino, “Oracle database vault. Data protection from insider threats “, Synthesis Lectures on Data Management, Purdue University, USA, pp 61–66, 2012. 
+[Online] Available:  https://doi.org/10.1007/978-3-031-01890-9_7 
+[8] E. Bertino, G. Ghinita, A. Kamra, "Access control for databases: concepts and systems", Foundations and Trends, vol. 3, no. 1–2, pp. 1-148, 2011. [Online] Available:  http://dx.doi.org/10.1561/1900000014
+[9] J. Doshi, B. Trivedi, “A quick look at data redaction in Oracle RDBMS”, L. J. Institute of Dean, Faculty of Computer Tec., [Online] Available: https://www.researchgate.net/profile/Dinesh-Hanchate/publication/305933909_Software_Project_Risk_Assessment_Application_of_Boehm_Metrics/links/57a62fed08aee07544bc2b19/Software-Project-Risk-Assessment-Application-of-Boehm-Metrics.pdf#page=30
+[10] S. Spendolini, “Virtual private database. in: expert oracle application express security”, Apress, Berkeley, CA., 2013. [Online] Available: https://doi.org/10.1007/978-1-4302-4732-6_12
+[11] R. Narang, “Database management systems” PHI learning private limited,  New Delhi. second edition, April. [Online] Available:  2011  https://books.google.co.uk/books?hl=en&lr=&id=B-cJhhsh4NAC&oi=fnd&pg=PP1&dq=oracle+data+mirroring&ots=BUHsG4Kd_V&sig=wPl41uNxSF22x9QT-9nMIOJJ9a0&redir_esc=y#v=onepage&q=oracle%20data%20mirroring&f=false
+[12] R. J. Santos, J. Bernardino, M. Vieira, “A data masking technique for data warehouses, IDEAS '11: Proceedings of the 15th Symposium on International Database Engineering & Applications, pp. 61–69, September 2011. [Online] Available:  https://doi.org/10.1145/2076623.2076632    
+[13] L. Yang, “Teaching database security and auditing”, SIGCSE '09: Proceedings of the 40th ACM technical symposium on Computer science education,  pp. 241–245March 2009. [Online] Available:  https://doi.org/10.1145/1508865.1508954
+[14] O. Cinar, R. H. Guncer; A. Yazici, “Database security in private database clouds.”, 2016 International Conference on Information Science and Security (ICISS), Publisher: IEEE, 19-22 December 2016. [Online] Available: https://ieeexplore.ieee.org/abstract/document/7885847
+[15] K. Natarajan, V. Shaik, “Transparent data encryption: comparative analysis and performance evaluation of oracle databases”, Publisher: IEEE, 2020 Fifth International Conference on Research in Computational Intelligence and Communication Networks (ICRCICN), 21 December 2020. [Online] Available: https://ieeexplore.ieee.org/abstract/document/9296168
+[16] M. Osama,  T. Chien, H. Sensoy, “Oracle Database Backup-and-Recovery Best Practices and New Features Principal”, Turkcell Communication Services. [Online] Available:https://d1wqtxts1xzle7.cloudfront.net/59449239/Rman_data_Recovry_advisor20190530-117904-36hmei-with-cover-page v2.pdf?Expires=1664304089&Signature=SpE~UJ~16CPX2E6AcprdSTjWxwQFm1d8vKtkU9SxRgCLCdQIUvqXuBUjBXDB2OmpfPJ3ht55LGT5MD-60SeGPqOlfUauy6Vhf9TpoXHAXbGdfpCsx1eh3WEN1heJHEihC5uUcnmUlhtcaOXGUPaWhdMkxKFUk487n2k4mW5JkhNXOOhPQgX7mizx~r0B127aFENWOhgziZNAlgb4nTVAOxTLc2S5SqLhczJrVcT7BYcDkjj6HAzm-ZWSoZDl4Ia5XodNESiXHkZf--fQhbGLTnrmZbN~Fn0QI9u0CCJQh2exnYw4OtwOe8Y-Q6umlKDcZAxyz-uUaKH2sMD25R53wA__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA
+
+
+
+
+
+
